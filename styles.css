@@ -170,9 +170,18 @@ body {
 }
 
 .profile-avatar {
-    font-size: 4rem;
     margin-bottom: 1rem;
-    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .profile-info h3 {
@@ -325,9 +334,16 @@ body {
 }
 
 .education-logo {
-    font-size: 2rem;
-    color: #2563eb;
     margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.education-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 .education-info h3 {
@@ -424,21 +440,43 @@ body {
     border: 1px solid #e5e7eb;
 }
 
-.experience-header h3 {
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experience-logo {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-info h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #1f2937;
 }
 
-.experience-header h4 {
+.experience-info h4 {
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
     color: #374151;
 }
 
-.experience-period {
+.experience-info .experience-period {
     font-size: 0.875rem;
     color: #6b7280;
     margin-bottom: 1rem;
@@ -563,45 +601,51 @@ body {
     font-size: 0.875rem;
 }
 
-.contact-form {
+.contact-actions {
     background: white;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid #e5e7eb;
+    text-align: center;
 }
 
-.contact-form h3 {
+.contact-actions h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #1f2937;
 }
 
-.form-group {
-    margin-bottom: 1rem;
+.contact-actions p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
     font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.contact-buttons .btn i {
+    font-size: 1.1rem;
 }
 
 /* Footer */
@@ -716,6 +760,32 @@ body {
     
     .timeline-marker {
         left: 1px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .education-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 }
 
