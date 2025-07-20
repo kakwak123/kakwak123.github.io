@@ -252,6 +252,30 @@ body {
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.skill-category h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category h4 i {
+    color: #2563eb;
+    font-size: 1.1rem;
 }
 
 .services {
